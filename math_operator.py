@@ -23,6 +23,7 @@ print "a / b =", c
 c = a % b
 print "a % b =", c
 
+# Operator '//' use to devide and resule only get a interger value 
 c = a // b
 print "a // b =", c
 
