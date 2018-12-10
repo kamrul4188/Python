@@ -6,22 +6,28 @@ while True:
     print("List = ", li)
     print("---------------------------------------------------------------------")
 
-    number = input ("Please enter your preferancnce add/remove/sort/reverse/exit/help : ")
-    number = number.lower()
+    selector = input ("Please enter your preferancnce add/remove/sort/reverse/exit/pop/help : ")
+    selector = selector.lower()
 
-    if number == "add":
+    if selector == "add":
         name = input("Enter a name you want to add: ")
         li.append(name) #Adding to list
-    elif number == "rm":
+    elif selector == "rm":
         name = input ("Enter a name you want to remove: ")
         li.remove(name) #Remove from the list
-    elif number == "help":
+    elif selector == "pop":
+        print ("Please add items in to lis first")
+        number = input("Please number you want to pop : ")
+        number = int(number)
+        items = li.pop(number)
+        print("The items is pop = ",  items)
+    elif selector == "help":
         print("add = adding new name ")
         print("remove = remove name from the list")
         print("sort = sort a to z the list")
         print("reverse = reverse order of list")
         print("exit = terminate the Program")
-    elif number == "exit":
+    elif selector == "exit":
         print ("Program terminated...")
         break
     else:
